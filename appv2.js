@@ -12,6 +12,8 @@ app.get("/apicall",async (req,res)=>{
     // const id = req.query.id;
     const coordinates = req.query.coordinates;
     const area = req.query.area;
+    const user = req.query.user;
+    const keyword = req.query.keyword;
     console.log(area);
     console.log(coordinates);
     const zoho_refreshToken = '1000.a75f74017d06e3de18e47ba3a010a8cd.567a4f1817e3f77a832b3ad59c0ae0fd';
@@ -27,7 +29,9 @@ app.get("/apicall",async (req,res)=>{
         {
             data:{
                 "coordinates": coordinates,
-                "Area": area
+                "Area": area,
+                "User":user,
+                "Keyword":keyword
               }
         },
         {
